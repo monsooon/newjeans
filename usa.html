@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="js/jquery.js"></script>
+    <style>
+
+        body{
+            background-color: rgb(125, 158, 228);
+        }
+
+        header>img{
+            display: block;
+            margin: 0 auto;
+        }
+        
+        h1{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #1f3ef1;
+        }
+
+        .btn {
+            margin: 0 auto;
+        }
+
+        p{
+            background-color: rgb(79, 104, 245);
+            border-radius: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        ul{
+            display: none;
+            margin: 0 auto;
+            width: 260px;
+        }
+
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        li{
+            margin-top: 20px;
+            list-style: none;
+        }
+
+  
+
+        
+    </style>
+    <title>뉴진스</title>
+</head>
+<body>
+    <header>
+        <img src="img/tokki.gif" alt="album cover">
+    </header>
+    <h1> NewJeans👖</h1>
+
+    <p class="btn"><a href="#">[ New ] Ditto!🎅🎄🎁🔔</a>
+        <ul>
+            <li><a href="https://hypebae.com/2022/12/newjeans-nudake-omg-pop-up-store-seoul-bunny-cake-merch-release-info">🎅 Nudake 콜라보</a></li>
+            <li><a href="https://youtu.be/pSUydWEqKwE" blank>🎄 Ditto MV (side A)</a></li>
+            <li><a href="#">🦌 Ditto MV (side B)</a></li>
+        </ul>
+    </p>
+    <p class="btn"><a href="#">Attention</a>
+        <ul>
+            <li><a href="#">Attention MV </a></li>
+            <li><a href="#">챌린지 </a></li>
+            <li><a href="#">인기 챌린지</a></li>
+        </ul>
+    </p>
+    <p class="btn"><a href="#">HypeBoy</a>
+        <ul>
+            <li><a href="#">HypeBoy MV</a></li>
+            <li><a href="#">챌린지</a></li>
+            <li><a href="#">인기 챌린지</a></li>
+        </ul>
+    </p>
+
+
+    <script>
+        $(function(){
+            $('.btn a').on('click', function(){
+                $('.btn').next('ul').filter(':visible').slideUp();
+                $(this).parent().next().slideDown();
+
+                return false;
+            })
+        });
+    </script>
+</body>
+</html>
